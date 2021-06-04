@@ -25,7 +25,8 @@ def take_command():
                 command = command.replace('jarvis', ' ') # Remove jarvis from speech
                 
     except:
-        talk('Please Repeat the command again')
+        pass
+        
     return command
 
 def run_command():
@@ -49,13 +50,13 @@ def run_command():
     elif('joke' in command):
         talk(pyjokes.get_joke())
 
-    elif('who is' or 'what is ' in command):
+    elif('who is' in command):
         person = command.replace('who is','')
         info = wikipedia.summary(person,1) # will retreive 1 line of information
         print(info)
         talk(info)
     else:
-        talk('Please repeat the command again')
+        talk('Sorry I am not programmed to answer this. Please try asking a different question')
     
     
 while True:
