@@ -10,6 +10,7 @@ engine.say('Hi I am JARVIS Your Personal Assistant')
 engine.say('What can I do for you ?')
 engine.runAndWait()
 
+
 def talk(text):
     engine.say(text)
     engine.runAndWait()
@@ -59,5 +60,6 @@ def run_command():
         talk('Sorry I am not programmed to answer this. Please try asking a different question')
     
     
+  
 while True:
     run_command()

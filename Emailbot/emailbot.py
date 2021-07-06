@@ -1,6 +1,7 @@
-# For this progream to work
+# For this program to work
 # Go to your Gmail account -> Manage your Google Account -> Security -> Less secure app access -> Turn on.
 # For any other person to test, change parameters in server.login and email['from']
+# Replace ***** in server.login with your email password
 
 
 import smtplib
@@ -41,7 +42,7 @@ def send_email(receiver,subject,message):
     # 2nd param is port(Similar to a door no in a large hallway)
     server.starttls()
     # TLS- TRansport Layer Security.This basically tells server to trust me :)
-    server.login('apuroop98@gmail.com','Hetto@500')
+    server.login('apuroop98@gmail.com','****')
     #1st param is your email address, 2nd param is your password.
     email = EmailMessage() #preexisting fun in python
     email['From'] = 'apuroop98@gmail.com' # Set senders email address
